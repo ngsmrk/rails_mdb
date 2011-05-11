@@ -1,9 +1,8 @@
 class Film < ActiveRecord::Base
-  attr_accessible :name, :url, :description, :rating
   before_validation :clean_url #this is the name of a private method
-  validates_presence_of :name, :url, :description
-  
+  validates_presence_of :name, :url, :description, :genre
   validates_numericality_of :rating, :greater_than => -1, :less_than => 6  
+  belongs_to :genre
 
 private
 def clean_url

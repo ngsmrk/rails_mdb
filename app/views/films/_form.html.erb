@@ -16,6 +16,10 @@
     <%= f.label :rating %><br />
     <%= f.select :rating, (0..5) %>
   </p>
+  <p>
+    <%= f.label :genre %><br />
+    <%= f.select :genre_id, genre_options %>
+  </p>
 
   <p><%= f.submit %></p>
 <% end %>

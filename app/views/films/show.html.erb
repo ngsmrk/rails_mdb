@@ -16,7 +16,10 @@
   <strong>Rating:</strong>
   <%= @film.rating %>
 </p>
-
+<p>
+  <strong>Genre:</strong>
+  <%= @film.genre.name %>
+</p>
 <p>
   <%= link_to "Edit", edit_film_path(@film) %> |
   <%= link_to "Destroy", @film, :confirm => 'Are you sure?', :method => :delete %> |
