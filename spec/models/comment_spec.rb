@@ -14,3 +14,16 @@ describe Comment do
     comment.should be_valid
   end  
 end
+
+# == Schema Information
+#
+# Table name: comments
+#
+#  id         :integer         not null, primary key
+#  text       :string(255)
+#  film_id    :integer
+#  user_id    :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+

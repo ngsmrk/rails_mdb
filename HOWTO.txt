@@ -1,6 +1,21 @@
+
+# set up devise
 rails g devise:install
+
+# set up user called user
 rails g devise User
 rails g devise Admin
+
+# set up standard views
 rails g devise:views
 
+# replace prototype with jquery
 rails g jquery:install
+
+# for asynchronous tasks
+rails g delayed_job (creates a migration)
+rake jobs:work (starts it)
+
+# nifty 
+rails g nifty:layout
+rails g nifty:scaffold Film name:string url:string description:string

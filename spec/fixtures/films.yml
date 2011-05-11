@@ -8,15 +8,22 @@ two:
   url: MyString
   description: MyString
 
+
 # == Schema Information
 #
 # Table name: films
 #
-#  id          :integer         not null, primary key
-#  name        :string(255)
-#  url         :string(255)
-#  description :string(255)
-#  created_at  :datetime
-#  updated_at  :datetime
+#  id                 :integer         not null, primary key
+#  name               :string(255)
+#  url                :string(255)
+#  description        :string(255)
+#  created_at         :datetime
+#  updated_at         :datetime
+#  rating             :integer
+#  genre_id           :integer
+#  photo_file_name    :string(255)
+#  photo_content_type :string(255)
+#  photo_file_size    :integer
+#  photo_updated_at   :datetime
 #
 

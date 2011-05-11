@@ -18,3 +18,14 @@ describe Genre do
     end.should change(Film, :count).by(-1)  
   end 
 end
+
+# == Schema Information
+#
+# Table name: genres
+#
+#  id         :integer         not null, primary key
+#  name       :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
