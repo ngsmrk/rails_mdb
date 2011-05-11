@@ -4,6 +4,10 @@ class Film < ActiveRecord::Base
   validates_numericality_of :rating, :greater_than => -1, :less_than => 6  
   belongs_to :genre
 
+  has_many :comments, :dependent => :destroy
+  
+  # has_attached_file :photo, :styles => {:medium => "300X300>", :thumb => "100X100>"}
+
 private
 def clean_url
 self.url.gsub!('http://', '') if self.url #self.url means it only runs this validation if there is a url

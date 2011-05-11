@@ -1,0 +1,6 @@
+rails g devise:install
+rails g devise User
+rails g devise Admin
+rails g devise:views
+
+rails g jquery:install

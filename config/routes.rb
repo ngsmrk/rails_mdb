@@ -1,7 +1,14 @@
 RailsMdb::Application.routes.draw do
+  devise_for :admins
+
+  devise_for :users
+
   resources :genres
 
-  resources :films
+  resources :films do
+    resources :comments, :only => [:create, :destroy]
+  end
+  
   resources :search, :only => :create
   
   root :to => "home#index"

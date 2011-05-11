@@ -25,3 +25,23 @@
   <%= link_to "Destroy", @film, :confirm => 'Are you sure?', :method => :delete %> |
   <%= link_to "View All", films_path %>
 </p>
+
+<div id="comments-container">
+	Comments<br/>
+	<% @film.comments.each do |comment| %>
+		
+		<%= render :partial => 'comments/comment', :locals => {:comment => comment} %>
+		
+	<% end %>
+	
+</div>
+	
+<%= hidden_field_tag :film_id, @film.id %>	
+	
+<div id="add-comments-container">
+	Add Comments<br/>
+	<% form_tag nil, :id => 'add-comment-form'  do %>
+		<%= text_area_tag :add_comment_text %>
+	<% end %>
+	<div><button id="add-comment-button">Add</button></div>
+</div>
