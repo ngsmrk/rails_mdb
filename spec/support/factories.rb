@@ -5,6 +5,7 @@ Factory.define :film do |film|
 film.name 'test film name'
 film.url 'www.testes.com'
 film.description 'seedy testing film'
+film.rating 3
 
 
 
