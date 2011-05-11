@@ -1,5 +1,8 @@
 RailsMdb::Application.routes.draw do
   resources :films
+  resources :search, :only => :create
+  
+  root :to => "home#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
